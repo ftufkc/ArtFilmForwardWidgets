@@ -111,7 +111,7 @@ async function enrichItemsWithTmdb(items) {
         return Widget.http.get(url).then(response => {
             const searchResults = JSON.parse(response.data);
             if (searchResults && searchResults.results && searchResults.results.length > 0) {
-                return {...item, tmdbData: searchResults.results }; // 取第一个结果
+                return {...item, tmdbData: searchResults.results[0] }; // 正确：返回数组的第一个元素
             }
             return {...item, tmdbData: null };
         }).catch(error => {
@@ -220,3 +220,17 @@ function parseCsv(str, opts = {}) {
 
     return arr;
 }
+
+// 导出需要测试的函数
+module.exports = {
+    getCollectionPage,
+    fetchAndCacheCriterionData,
+    fetchAndCacheTmdbConfig,
+    enrichItemsWithTmdb,
+    mapToForwardDataModel,
+    parseCsv,
+    _private: { // 也可导出内部变量用于测试重置
+        setCriterionList: (list) => { criterionList = list; },
+        setTmdbConfig: (config) => { tmdbConfig = config; }
+    }
+};
