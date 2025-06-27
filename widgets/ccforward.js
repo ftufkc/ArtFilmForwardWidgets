@@ -91,11 +91,15 @@ async function enrichItemsWithTmdb(items) {
             if (!response) {
                 throw new Error("获取数据失败");
             }
-            console.log(response);
-            const searchResults = JSON.parse(JSON.stringify(response.data));
-            if (searchResults && searchResults.results && searchResults.results.length > 0) {
-                return {...item, tmdbData: searchResults.results[0] }; // 正确：返回数组的第一个元素
+            // console.log(response);
+            const data = response.results;
+            if (data && data.length > 0) {
+                return {...item, tmdbData: data[0] };
             }
+            // const searchResults = JSON.parse(JSON.stringify(response.data));
+            // if (searchResults && searchResults.results && searchResults.results.length > 0) {
+            //     return {...item, tmdbData: searchResults.results[0] }; // 正确：返回数组的第一个元素
+            // }
             return {...item, tmdbData: null };
         }).catch(error => {
             console.error(`为 "${item.title}" 获取 TMDB 数据失败:`, error);
@@ -111,24 +115,19 @@ async function enrichItemsWithTmdb(items) {
  * @returns {Array<object>} - 符合 Forward 规范的对象数组。
  */
 function mapToForwardDataModel(enrichedItems) {
-    const imageBaseUrl = tmdbConfig.images.secure_base_url;
     // 这里会过滤tmdb为null的部分，单可能会导致单个page数据小于20，我觉得是可以接受的
-    return enrichedItems.filter(item => item.tmdbData).map(item => {
-        const tmdb = item.tmdbData;
-        console.log(tmdb);
-        const posterSize = 'w500';
-        const backdropSize = 'w780';
-
+    return enrichedItems.filter(item => item).map(item => {
+        console.log(item);
         return {
-            id: `movie.${tmdb.id}`,
-            type: 'tmdb',
-            title: item.title,
-            description: `导演: ${item.director}\n国家: ${item.country}\nCC 编号: ${item.spine}\n\n${tmdb && tmdb.overview? tmdb.overview : '暂无简介。'}`,
-            releaseDate: item.year.toString(),
-            backdropPath: tmdb && tmdb.backdrop_path? `${imageBaseUrl}${backdropSize}${tmdb.backdrop_path}` : null,
-            posterPath: tmdb && tmdb.poster_path? `${imageBaseUrl}${posterSize}${tmdb.poster_path}` : null,
-            rating: tmdb && tmdb.vote_average? tmdb.vote_average.toFixed(1) : 'N/A',
-            mediaType: 'movie'
+            id: item.id,
+            type: "tmdb",
+            title: item.title ?? item.name,
+            description: item.overview,
+            releaseDate: item.release_date ?? item.first_air_date,
+            backdropPath: item.backdrop_path,
+            posterPath: item.poster_path,
+            rating: item.vote_average,
+            mediaType: "movie",
         };
     });
 }
