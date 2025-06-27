@@ -5,7 +5,7 @@
  */
 
 // 1. Widget Metadata: Defines the widget's properties and entry points for the Forward app.
-var WidgetMetadata = {
+WidgetMetadata = {
     "id": "criterion_collection",
     "title": "Criterion Collection",
     "description": "浏览完整的标准收藏(CC)电影列表，并从TMDB获取封面和详情。",
