@@ -85,6 +85,7 @@ async function enrichItemsWithTmdb(items) {
             if (!response) {
                 throw new Error("获取数据失败");
             }
+            console.log("调用/search/movie成功");
             console.log(response);
             const data = response.results;
             if (data && data.length > 0) {
