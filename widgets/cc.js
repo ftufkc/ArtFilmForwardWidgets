@@ -88,7 +88,13 @@ async function fetchAndCacheTmdbConfig() {
     }
     console.log("正在获取 TMDB API 配置...");
     const url = `${TMDB_API_BASE_URL}/configuration?api_key=${TMDB_API_KEY}`;
-    const response = await Widget.http.get(url);
+    const response = await Widget.http.get(url, {
+        headers: {
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+            Referer: "https://www.themoviedb.org",
+        },
+    });
+    console.log(response.data)
     tmdbConfig = JSON.parse(response.data);
     console.log("成功获取并缓存了 TMDB API 配置。");
 }
@@ -104,7 +110,12 @@ async function enrichItemsWithTmdb(items) {
         const year = item.year;
         const url = `${TMDB_API_BASE_URL}/search/movie?api_key=${TMDB_API_KEY}&query=${query}&primary_release_year=${year}&language=zh-CN`;
 
-        return Widget.http.get(url).then(response => {
+        return Widget.http.get(url, {
+            headers: {
+                "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+                Referer: "https://www.themoviedb.org",
+            },
+        }).then(response => {
             const searchResults = JSON.parse(response.data);
             if (searchResults && searchResults.results && searchResults.results.length > 0) {
                 return {...item, tmdbData: searchResults.results[0] }; // 正确：返回数组的第一个元素
@@ -224,11 +235,6 @@ function parseCsv(str, opts = {}) {
 // 导出需要测试的函数
 module.exports = {
     getCollectionPage,
-    fetchAndCacheCriterionData,
-    fetchAndCacheTmdbConfig,
-    enrichItemsWithTmdb,
-    mapToForwardDataModel,
-    parseCsv,
     _private: { // 也可导出内部变量用于测试重置
         setCriterionList: (list) => { criterionList = list; },
         setTmdbConfig: (config) => { tmdbConfig = config; }
