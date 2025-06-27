@@ -136,7 +136,7 @@ function mapToForwardDataModel(enrichedItems) {
         const backdropSize = 'w780';
 
         return {
-            id: `cc-${item.spine_number}`,
+            id: `cc-${item.spine}`,
             type: 'movie',
             title: item.title,
             coverUrl: tmdb && tmdb.poster_path? `${imageBaseUrl}${posterSize}${tmdb.poster_path}` : null,
@@ -145,7 +145,7 @@ function mapToForwardDataModel(enrichedItems) {
             releaseDate: item.year.toString(),
             mediaType: 'movie',
             rating: tmdb && tmdb.vote_average? tmdb.vote_average.toFixed(1) : 'N/A',
-            description: `导演: ${item.director}\n国家: ${item.country}\nCC 编号: ${item.spine_number}\n\n${tmdb && tmdb.overview? tmdb.overview : '暂无简介。'}`,
+            description: `导演: ${item.director}\n国家: ${item.country}\nCC 编号: ${item.spine}\n\n${tmdb && tmdb.overview? tmdb.overview : '暂无简介。'}`,
         };
     });
 }
@@ -158,6 +158,10 @@ function mapToForwardDataModel(enrichedItems) {
  * @returns {Array<Array<string>>|Array<Object>}
  */
 function parseCsv(str, opts = {}) {
+    // 关键修复：如果字符串以BOM字符开头，则移除它
+    if (str.charCodeAt(0) === 0xFEFF) {
+        str = str.slice(1);
+    }
     // 修正 #1: 初始化为空数组
     const arr = [];
     let quote = false;
