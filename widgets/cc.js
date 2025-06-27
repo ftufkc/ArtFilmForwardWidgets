@@ -6,21 +6,22 @@
  */
 
 // 1. Widget Metadata
-var WidgetMetadata = {
-    "id": "criterion_collection",
-    "title": "Criterion Collection",
-    "description": "浏览完整的标准收藏(CC)电影列表，并从TMDB获取封面和详情。",
-    "author": "ddueh", // 请替换为您的名字
-    "version": "1.1.0",
-    "requiredVersion": "0.0.1",
-    "detailCacheDuration": 3600,
-    "modules": [{
-        "title": "Criterion Collection 电影列表",
-        "functionName": "getCollectionPage",
-        "params": [{
-            "key": "page",
-            "type": "page",
-            "title": "页码"
+WidgetMetadata = {
+    id: "criterion_collection",
+    title: "Criterion Collection",
+    version: "1.1.0",
+    requiredVersion: "0.0.1",
+    description: "完整的标准收藏(CC)电影列表",
+    author: "ddueh",
+    detailCacheDuration: 360000,
+    modules: [{
+        id: "cc",
+        title: "Criterion Collection 电影列表",
+        functionName: "getCollectionPage",
+        params: [{
+            name: "page",
+            title: "页码",
+            type: "page"
         }]
     }]
 };
@@ -57,12 +58,7 @@ async function getCollectionPage(params = {}) {
 
     } catch (error) {
         console.error("处理 Criterion Collection 列表失败:", error);
-        return [{
-            id: 'error',
-            type: 'movie',
-            title: '加载失败',
-            description: `无法加载 Criterion Collection 数据。请检查网络连接或稍后重试。\n错误详情: ${error.message}`
-        }];
+        throw error;
     }
 }
 
@@ -128,6 +124,7 @@ async function enrichItemsWithTmdb(items) {
  * @returns {Array<object>} - 符合 Forward 规范的对象数组。
  */
 function mapToForwardDataModel(enrichedItems) {
+    console.log(enrichedItems);
     const imageBaseUrl = tmdbConfig.images.secure_base_url;
 
     return enrichedItems.map(item => {
@@ -136,16 +133,15 @@ function mapToForwardDataModel(enrichedItems) {
         const backdropSize = 'w780';
 
         return {
-            id: `cc-${item.spine}`,
-            type: 'movie',
+            id: `movie.${tmdb.id}`,
+            type: 'tmdb',
             title: item.title,
-            coverUrl: tmdb && tmdb.poster_path? `${imageBaseUrl}${posterSize}${tmdb.poster_path}` : null,
-            posterPath: tmdb && tmdb.poster_path? `${imageBaseUrl}${posterSize}${tmdb.poster_path}` : null,
-            backdropPath: tmdb && tmdb.backdrop_path? `${imageBaseUrl}${backdropSize}${tmdb.backdrop_path}` : null,
-            releaseDate: item.year.toString(),
-            mediaType: 'movie',
-            rating: tmdb && tmdb.vote_average? tmdb.vote_average.toFixed(1) : 'N/A',
             description: `导演: ${item.director}\n国家: ${item.country}\nCC 编号: ${item.spine}\n\n${tmdb && tmdb.overview? tmdb.overview : '暂无简介。'}`,
+            releaseDate: item.year.toString(),
+            backdropPath: tmdb && tmdb.backdrop_path? `${imageBaseUrl}${backdropSize}${tmdb.backdrop_path}` : null,
+            posterPath: tmdb && tmdb.poster_path? `${imageBaseUrl}${posterSize}${tmdb.poster_path}` : null,
+            rating: tmdb && tmdb.vote_average? tmdb.vote_average.toFixed(1) : 'N/A',
+            mediaType: 'movie'
         };
     });
 }
