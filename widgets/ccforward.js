@@ -85,7 +85,7 @@ async function enrichItemsWithTmdb(items) {
             if (!response) {
                 throw new Error("获取数据失败");
             }
-            // console.log(response);
+            console.log(response);
             const data = response.results;
             if (data && data.length > 0) {
                 return {...item, tmdbData: data[0] };
