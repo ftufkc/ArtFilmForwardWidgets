@@ -86,10 +86,11 @@ async function enrichItemsWithTmdb(items) {
                 throw new Error("获取数据失败");
             }
             console.log("调用/search/movie成功");
-            console.log(response);
+            // console.log(response);
             const data = response.results;
-            console.log('tmdb data: %s',data);
+            // console.log('tmdb data: %s',data);
             if (data && data.length > 0) {
+                console.log('fist tmdb data: %s',data[0]);
                 return {...item, tmdbData: data[0] };
             }
             // const searchResults = JSON.parse(JSON.stringify(response.data));
