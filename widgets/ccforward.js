@@ -110,7 +110,7 @@ async function enrichItemsWithTmdb(items) {
  */
 function mapToForwardDataModel(enrichedItems) {
     // 这里会过滤tmdb为null的部分，单可能会导致单个page数据小于20，我觉得是可以接受的
-    return enrichedItems.filter(item => item.id).map(item => {
+    return enrichedItems.filter(item => item !== null).map(item => {
         console.log(item);
         return {
             id: item.id,
