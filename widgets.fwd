@@ -1,0 +1,16 @@
+{
+  "title": "ddueh's Widgets",
+  "description": "A collection of widgets created by ddueh",
+  "icon": "https://github.com/huangxd-/ForwardWidgets/raw/main/icon.png",
+  "widgets": [
+    {
+      "id": "cc",
+      "title": "The Criterion Collection",
+      "description": "标准收藏（The Criterion Collection，简称CC）是美国的一家私人公司，专门发行“重要的杰作及当代电影”的“权威”版本。",
+      "requiredVersion": "0.0.1",
+      "version": "1.0.13",
+      "author": "ddueh",
+      "url": "https://raw.githubusercontent.com/ftufkc/ArtFilmForwardWidgets/refs/heads/main/widgets/cc.js"
+    }
+  ]
+}
