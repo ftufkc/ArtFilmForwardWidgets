@@ -89,7 +89,7 @@ async function fetchAndCacheTmdbConfig() {
     const url = `${TMDB_API_BASE_URL}/configuration?api_key=${TMDB_API_KEY}`;
     const response = await Widget.http.get(url);
     tmdbConfig = JSON.parse(JSON.stringify(response.data));
-    console.log(tmdbConfig)
+    // console.log(tmdbConfig)
     console.log("成功获取并缓存了 TMDB API 配置。");
 }
 
@@ -124,11 +124,11 @@ async function enrichItemsWithTmdb(items) {
  * @returns {Array<object>} - 符合 Forward 规范的对象数组。
  */
 function mapToForwardDataModel(enrichedItems) {
-    console.log(enrichedItems);
     const imageBaseUrl = tmdbConfig.images.secure_base_url;
-
-    return enrichedItems.map(item => {
+    // 这里会过滤tmdb为null的部分，单可能会导致单个page数据小于20，我觉得是可以接受的
+    return enrichedItems.filter(item => item.tmdbData).map(item => {
         const tmdb = item.tmdbData;
+        console.log(tmdb);
         const posterSize = 'w500';
         const backdropSize = 'w780';
 
