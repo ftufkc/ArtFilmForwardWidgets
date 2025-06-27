@@ -13,7 +13,6 @@ WidgetMetadata = {
     requiredVersion: "0.0.1",
     description: "完整的标准收藏(CC)电影列表",
     author: "ddueh",
-    detailCacheDuration: 360000,
     modules: [{
         id: "cc",
         title: "Criterion Collection 电影列表",
