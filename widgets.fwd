@@ -20,6 +20,15 @@
           "version": "1.2.0",
           "author": "ddueh",
           "url": "https://raw.githubusercontent.com/ftufkc/ArtFilmForwardWidgets/refs/heads/main/widgets/tspdt.js"
+    },
+    {
+              "id": "mubi",
+              "title": "The greatest films voted by MUBI’s",
+              "description": "The greatest films ever made, as voted by MUBI’s global community of film lovers.",
+              "requiredVersion": "0.0.1",
+              "version": "1.2.0",
+              "author": "ddueh",
+              "url": "https://raw.githubusercontent.com/ftufkc/ArtFilmForwardWidgets/refs/heads/main/widgets/mubi.js"
     }
   ]
 }
