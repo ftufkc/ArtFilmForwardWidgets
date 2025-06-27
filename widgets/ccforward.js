@@ -113,17 +113,17 @@ async function enrichItemsWithTmdb(items) {
  */
 function mapToForwardDataModel(enrichedItems) {
     // 这里会过滤tmdb为null的部分，单可能会导致单个page数据小于20，我觉得是可以接受的
-    return enrichedItems.filter(item => item !== null && item.id != null).map(item => {
-        console.log(item);
+    return enrichedItems.filter(item => item.tmdbData).map(item => {
+        const tmdb = item.tmdbData;
         return {
-            id: item.id,
+            id: tmdb.id,
             type: "tmdb",
-            title: item.title ?? item.name,
-            description: item.overview,
-            releaseDate: item.release_date ?? item.first_air_date,
-            backdropPath: item.backdrop_path,
-            posterPath: item.poster_path,
-            rating: item.vote_average,
+            title: tmdb.title ?? tmdb.name,
+            description: tmdb.overview,
+            releaseDate: tmdb.release_date ?? tmdb.first_air_date,
+            backdropPath: tmdb.backdrop_path,
+            posterPath: tmdb.poster_path,
+            rating: tmdb.vote_average,
             mediaType: "movie",
         };
     });
