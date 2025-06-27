@@ -25,17 +25,11 @@ WidgetMetadata = {
     }]
 };
 
-// 2. Configuration & Constants
-//!!! 重要: 请在此处填入您自己的 TMDB API Key!!!
-const TMDB_API_KEY = 'f74a7e719a0285a1da9013e73f76f236';
-const ITEMS_PER_PAGE = 20;
-// 已更新为正确的 CSV raw URL
-const CRITERION_DATA_URL = 'https://raw.githubusercontent.com/arrismo/criterioncollection/main/data-raw/criterion.csv';
-const TMDB_API_BASE_URL = 'https://api.themoviedb.org/3';
 
-// 3. Global Cache Variables
+const ITEMS_PER_PAGE = 20;
+const CRITERION_DATA_URL = 'https://raw.githubusercontent.com/arrismo/criterioncollection/main/data-raw/criterion.csv';
 let criterionList = []; // 初始化为一个空数组，缓存 Criterion Collection 完整列表
-let tmdbConfig = null; // 缓存 TMDB API 配置
+
 
 /**
  * 主函数，由 Forward 框架调用。
@@ -206,12 +200,3 @@ function parseCsv(str, opts = {}) {
 
     return arr;
 }
-
-// 导出需要测试的函数
-module.exports = {
-    getCollectionPage,
-    _private: { // 也可导出内部变量用于测试重置
-        setCriterionList: (list) => { criterionList = list; },
-        setTmdbConfig: (config) => { tmdbConfig = config; }
-    }
-};
