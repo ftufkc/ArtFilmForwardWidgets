@@ -95,7 +95,8 @@ async function fetchAndCacheTmdbConfig() {
         },
     });
     console.log(response.data)
-    tmdbConfig = JSON.parse(response.data);
+    tmdbConfig = response.data;
+    // tmdbConfig = JSON.parse(response.data);
     console.log("成功获取并缓存了 TMDB API 配置。");
 }
 
