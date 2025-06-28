@@ -8,10 +8,10 @@
 // 1. Widget Metadata
 WidgetMetadata = {
     id: "criterion_collection",
-    title: "Criterion Collection",
+    title: "The Criterion Collection",
     version: "1.2.2",
     requiredVersion: "0.0.1",
-    description: "完整的标准收藏(CC)电影列表",
+    description: "标准收藏（The Criterion Collection，简称CC）是美国的一家私人公司，专门发行“重要的杰作及当代电影”的“权威”版本",
     author: "ddueh",
     modules: [{
         id: "cc",

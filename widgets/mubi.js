@@ -11,7 +11,7 @@ WidgetMetadata = {
     title: "The greatest films voted by MUBI’s",
     version: "1.2.2",
     requiredVersion: "0.0.1",
-    description: "有史以来最伟大的电影，由MUBI全球电影爱好者社区投票选出。",
+    description: "有史以来最伟大的电影，由MUBI全球电影爱好者社区投票选出",
     author: "ddueh",
     modules: [{
         id: "mubi movie",
