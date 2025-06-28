@@ -12792,7 +12792,12 @@ const CC_STATIC = [
 ];
 
 async function getCollections(params = {}) {
-    return CC_STATIC;
+    return getRandomArray(CC_STATIC);
 }
+
+function getRandomArray(arr) {
+    return arr.slice().sort(() => Math.random() - 0.5);
+}
+
 
 

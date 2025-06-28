@@ -27,7 +27,7 @@ WidgetMetadata = {
 
 // 2. Configuration & Constants
 //!!! 重要: 请在此处填入您自己的 TMDB API Key!!!
-const TMDB_API_KEY = 'f74a7e719a0285a1da9013e73f76f236';
+const TMDB_API_KEY = 'xxx';
 const ITEMS_PER_PAGE = 20;
 // 已更新为正确的 CSV raw URL
 const CRITERION_DATA_URL = 'https://raw.githubusercontent.com/arrismo/criterioncollection/main/data-raw/criterion.csv';

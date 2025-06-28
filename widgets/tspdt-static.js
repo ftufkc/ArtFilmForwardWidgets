@@ -7,7 +7,7 @@ WidgetMetadata = {
     author: "ddueh",
     modules: [{
         id: "tspdt",
-        title: "tspdt Film List",
+        title: "TSPDT Film List",
         functionName: "getCollections",
         params: []
     }]
@@ -10797,7 +10797,11 @@ const TSPDT_STATIC = [
 ]
 
 async function getCollections(params = {}) {
-    return TSPDT_STATIC;
+    return getRandomArray(TSPDT_STATIC);
+}
+
+function getRandomArray(arr) {
+    return arr.slice().sort(() => Math.random() - 0.5);
 }
 
 

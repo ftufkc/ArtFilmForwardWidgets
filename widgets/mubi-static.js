@@ -7,7 +7,7 @@ WidgetMetadata = {
     author: "ddueh",
     modules: [{
         id: "mubi",
-        title: "mubi Film List",
+        title: "MUBI Film List",
         functionName: "getCollections",
         params: []
     }]
@@ -10918,7 +10918,11 @@ const MUBI_STATIC = [
 ]
 
 async function getCollections(params = {}) {
-    return MUBI_STATIC;
+    return getRandomArray(MUBI_STATIC);
+}
+
+function getRandomArray(arr) {
+    return arr.slice().sort(() => Math.random() - 0.5);
 }
 
 
