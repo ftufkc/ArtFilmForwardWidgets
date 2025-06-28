@@ -15,7 +15,7 @@ WidgetMetadata = {
     author: "ddueh",
     modules: [{
         id: "cc",
-        title: "Criterion Collection 电影列表",
+        title: "CC Film List",
         functionName: "getCollectionPage",
         params: [{
             name: "page",

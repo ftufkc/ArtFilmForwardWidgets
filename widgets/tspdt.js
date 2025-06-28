@@ -14,7 +14,7 @@ WidgetMetadata = {
     description: "从16,874个电影列表和选票中汇编，The 1,000 Greatest Films可能是你能找到的最受好评的电影的权威集合",
     author: "ddueh",
     modules: [{
-        id: "tspdt movie",
+        id: "TSPDT Film List",
         title: "tspdt 电影列表",
         functionName: "getCollectionPage",
         params: [{
