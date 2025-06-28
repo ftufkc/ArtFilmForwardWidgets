@@ -7,14 +7,14 @@
 
 // 1. Widget Metadata
 WidgetMetadata = {
-    id: "criterion_collection_static",
-    title: "The Criterion Collection Static",
-    version: "1.2.2",
+    id: "cc",
+    title: "The Criterion Collection",
+    version: "1.2.3",
     requiredVersion: "0.0.1",
     description: "标准收藏（The Criterion Collection，简称CC）是美国的一家私人公司，专门发行“重要的杰作及当代电影”的“权威”版本",
     author: "ddueh",
     modules: [{
-        id: "cc_static",
+        id: "cc",
         title: "CC Film List",
         functionName: "getCollections",
         params: []
