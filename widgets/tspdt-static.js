@@ -9,7 +9,7 @@ WidgetMetadata = {
         id: "tspdt",
         title: "TSPDT Film List",
         functionName: "getCollections",
-        cacheDuration: 60,
+        cacheDuration: 3600,
         params: []
     }]
 };

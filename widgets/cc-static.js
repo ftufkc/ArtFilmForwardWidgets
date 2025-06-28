@@ -17,7 +17,7 @@ WidgetMetadata = {
         id: "cc",
         title: "CC Film List",
         functionName: "getCollections",
-        cacheDuration: 60,
+        cacheDuration: 3600,
         params: []
     }]
 };
