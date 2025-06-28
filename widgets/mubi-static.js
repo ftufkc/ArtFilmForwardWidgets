@@ -1,6 +1,6 @@
 WidgetMetadata = {
     id: "mubi",
-    title: "The greatest films voted by MUBI’s",
+    title: "The Greatest Films Voted By MUBI’s",
     version: "1.2.3",
     requiredVersion: "0.0.1",
     description: "有史以来最伟大的电影，由MUBI全球电影爱好者社区投票选出",
