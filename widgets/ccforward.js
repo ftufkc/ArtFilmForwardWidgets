@@ -9,12 +9,12 @@
 WidgetMetadata = {
     id: "criterion_collection",
     title: "Criterion Collection",
-    version: "1.2.1",
+    version: "1.2.2",
     requiredVersion: "0.0.1",
     description: "完整的标准收藏(CC)电影列表",
     author: "ddueh",
     modules: [{
-        id: "cc",
+        id: "cc movie",
         title: "CC Film List",
         functionName: "getCollectionPage",
         params: [{
