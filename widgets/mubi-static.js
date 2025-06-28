@@ -9,6 +9,7 @@ WidgetMetadata = {
         id: "mubi",
         title: "MUBI Film List",
         functionName: "getCollections",
+        cacheDuration: 60,
         params: []
     }]
 };
