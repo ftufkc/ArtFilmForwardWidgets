@@ -1,4 +1,13 @@
 # ArtFilmForwardWidgets
+
+## 显示效果
+
+![ ](https://raw.githubusercontent.com/ftufkc/ArtFilmForwardWidgets/refs/heads/main/assert/IMG_8623.PNG)
+
+## 引用地址
+
+https://raw.githubusercontent.com/ftufkc/ArtFilmForwardWidgets/refs/heads/main/widgets.fwd
+
 ## 数据源
 
 CC：https://github.com/arrismo/criterioncollection/blob/main/data-raw/criterion.csv
