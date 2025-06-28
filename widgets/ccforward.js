@@ -93,7 +93,7 @@ async function enrichItemsWithTmdb(items) {
             const data = response.results;
             // console.log('tmdb data: %s',data);
             if (data && data.length > 0) {
-                console.log('fist tmdb data: %s',data[0]);
+                // console.log('fist tmdb data: %s',data[0]);
                 return {...item, tmdbData: data[0] };
             }
             // const searchResults = JSON.parse(JSON.stringify(response.data));
@@ -118,6 +118,7 @@ function mapToForwardDataModel(enrichedItems) {
     // 这里会过滤tmdb为null的部分，单可能会导致单个page数据小于20，我觉得是可以接受的
     return enrichedItems.filter(item => item.tmdbData).map(item => {
         const tmdb = item.tmdbData;
+        console.log(tmdb);
         return {
             id: tmdb.id,
             type: "tmdb",
