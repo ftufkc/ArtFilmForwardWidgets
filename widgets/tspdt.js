@@ -9,13 +9,13 @@
 WidgetMetadata = {
     id: "tspdt",
     title: "They Shoot Pictures, Don't They?",
-    version: "1.2.0",
+    version: "1.2.1",
     requiredVersion: "0.0.1",
     description: "从16,874个电影列表和选票中汇编，The 1,000 Greatest Films可能是你能找到的最受好评的电影的权威集合",
     author: "ddueh",
     modules: [{
         id: "tspdt movie",
-        title: "tspdt 电影列表",
+        title: "TSPDT Film List",
         functionName: "getCollectionPage",
         params: [{
             name: "page",

@@ -9,13 +9,13 @@
 WidgetMetadata = {
     id: "mubi",
     title: "The greatest films voted by MUBI’s",
-    version: "1.2.0",
+    version: "1.2.1",
     requiredVersion: "0.0.1",
     description: "The greatest films ever made, as voted by MUBI’s global community of film lovers.",
     author: "ddueh",
     modules: [{
         id: "mubi movie",
-        title: "mubi 电影列表",
+        title: "MUBI Film List",
         functionName: "getCollectionPage",
         params: [{
             name: "page",

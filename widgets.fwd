@@ -8,7 +8,7 @@
       "title": "The Criterion Collection",
       "description": "标准收藏（The Criterion Collection，简称CC）是美国的一家私人公司，专门发行“重要的杰作及当代电影”的“权威”版本。",
       "requiredVersion": "0.0.1",
-      "version": "1.2.0",
+      "version": "1.2.1",
       "author": "ddueh",
       "url": "https://raw.githubusercontent.com/ftufkc/ArtFilmForwardWidgets/refs/heads/main/widgets/ccforward.js"
     },
@@ -17,7 +17,7 @@
           "title": "They Shoot Pictures, Don't They?",
           "description": "从16,874个电影列表和选票中汇编，The 1,000 Greatest Films可能是你能找到的最受好评的电影的权威集合",
           "requiredVersion": "0.0.1",
-          "version": "1.2.0",
+          "version": "1.2.1",
           "author": "ddueh",
           "url": "https://raw.githubusercontent.com/ftufkc/ArtFilmForwardWidgets/refs/heads/main/widgets/tspdt.js"
     },
@@ -26,7 +26,7 @@
               "title": "The greatest films voted by MUBI’s",
               "description": "The greatest films ever made, as voted by MUBI’s global community of film lovers.",
               "requiredVersion": "0.0.1",
-              "version": "1.2.0",
+              "version": "1.2.1",
               "author": "ddueh",
               "url": "https://raw.githubusercontent.com/ftufkc/ArtFilmForwardWidgets/refs/heads/main/widgets/mubi.js"
     }
