@@ -27,7 +27,10 @@ WidgetMetadata = {
 
 
 const ITEMS_PER_PAGE = 20;
-const CRITERION_DATA_URL = 'https://raw.githubusercontent.com/arrismo/criterioncollection/main/data-raw/criterion.csv';
+// 原始来源
+// const CRITERION_DATA_URL = 'https://raw.githubusercontent.com/arrismo/criterioncollection/main/data-raw/criterion.csv';
+// 本仓库版本
+const CRITERION_DATA_URL = 'https://raw.githubusercontent.com/ftufkc/ArtFilmForwardWidgets/refs/heads/main/files/criterion.csv';
 let criterionList = []; // 初始化为一个空数组，缓存 Criterion Collection 完整列表
 
 
