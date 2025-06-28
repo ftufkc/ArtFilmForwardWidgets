@@ -14,7 +14,7 @@ WidgetMetadata = {
     description: "完整的标准收藏(CC)电影列表",
     author: "ddueh",
     modules: [{
-        id: "cc movie",
+        id: "cc",
         title: "CC Film List",
         functionName: "getCollectionPage",
         params: [{
