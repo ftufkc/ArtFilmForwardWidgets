@@ -4,13 +4,13 @@
   "icon": "https:\/\/raw.githubusercontent.com\/ftufkc\/emby-icon\/main\/icon\/qingmeiyinghua-emby.png",
   "widgets": [
     {
-      "id": "criterion_collection_self",
-      "title": "Criterion Collection_self",
-      "description": "完整的标准收藏(CC)电影列表",
+      "id": "criterion_collection_static",
+      "title": "The Criterion Collection Static",
+      "description": "标准收藏（The Criterion Collection，简称CC）是美国的一家私人公司，专门发行“重要的杰作及当代电影”的“权威”版本",
       "requiredVersion": "0.0.1",
-      "version": "1.1.0",
+      "version": "1.2.2",
       "author": "ddueh",
-      "url": "https://raw.githubusercontent.com/ftufkc/ArtFilmForwardWidgets/refs/heads/main/widgets/cc.js"
+      "url": "https://raw.githubusercontent.com/ftufkc/ArtFilmForwardWidgets/refs/heads/main/widgets/cc-static.js"
     },
     {
       "id": "criterion_collection",
