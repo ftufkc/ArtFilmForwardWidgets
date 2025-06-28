@@ -96,7 +96,7 @@ async function main() {
     const metadata = {
       title: 'ddueh\'s Widgets',
       description: 'A collection of widgets created by ddueh',
-      icon: 'https:\/\/raw.githubusercontent.com\/ftufkc\/emby-icon\/main\/icon\/qingmeiyinghua-emby.png',
+      icon: 'https://raw.githubusercontent.com/ftufkc/emby-icon/main/icon/qingmeiyinghua-emby.png',
       widgets: widgetIndex
     }
     
