@@ -15,7 +15,7 @@ WidgetMetadata = {
     author: "ddueh",
     modules: [{
         id: "mubi movie",
-        title: "MUBI Film List",
+        title: "mubi 电影列表",
         functionName: "getCollectionPage",
         params: [{
             name: "page",
