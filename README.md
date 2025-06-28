@@ -2,7 +2,7 @@
 
 ## 显示效果
 
-![ ](https://raw.githubusercontent.com/ftufkc/ArtFilmForwardWidgets/refs/heads/main/assert/IMG_8623.PNG)
+<img src="https://raw.githubusercontent.com/ftufkc/ArtFilmForwardWidgets/refs/heads/main/assert/IMG_8623.PNG" alt="示例图" style="width:50%;"/>
 
 ## 引用地址
 
