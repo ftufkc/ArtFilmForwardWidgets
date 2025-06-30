@@ -3734,14 +3734,14 @@ const TSPDT_STATIC = [
         "mediaType": "movie"
     },
     {
-        "id": 651058,
+        "id": 8075,
         "type": "tmdb",
-        "title": "Week-end",
-        "description": "Romp through a world full of Rube Goldberg devices, then to a jungle trek, then to paradise...",
-        "releaseDate": "1967-12-27",
-        "backdropPath": null,
-        "posterPath": null,
-        "rating": 0,
+        "title": "Week End",
+        "description": "一对巴黎上流社会的夫妇周末驱车去巴黎，他们即将继承一笔遗产。不料，路途中目睹了可怕的连环大车祸。这对他们来说只是噩梦的开始，下了公路又看到另一种恐怖情景，接下来还将会遭遇强奸、谋杀、抢劫，还有食人族等等。在这部影片的开头部分，一个仅仅穿着乳罩和短裤的女人，坐在半明半暗的一张桌子上，直接对着一部推近拉远的摄像机说话，详细地叙述她参加的一次狂欢。思想激进的戈达尔，正是用他自己的方式与好莱坞抗衡。",
+        "releaseDate": "1967-12-29",
+        "backdropPath": "/beRcdPSD4cYcmMilMpsdrChpNGt.jpg",
+        "posterPath": "/e9p8VdsAKXz1GoVXD36Lg5e3YKo.jpg",
+        "rating": 6.976,
         "mediaType": "movie"
     },
     {
