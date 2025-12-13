@@ -13,6 +13,15 @@
       "url": "https://raw.githubusercontent.com/ftufkc/ArtFilmForwardWidgets/refs/heads/main/widgets/cc-static.js"
     },
     {
+      "id": "fa",
+      "title": "Film Archive",
+      "description": "中国电影资料馆与上海电影资料馆是中国大陆重要的电影档案与放映机构，本合集用于追踪其策划的展映片单",
+      "requiredVersion": "0.0.1",
+      "version": "1.2.3",
+      "author": "ddueh",
+      "url": "https://raw.githubusercontent.com/ftufkc/ArtFilmForwardWidgets/refs/heads/main/widgets/fa.js"
+    },
+    {
       "id": "mubi",
       "title": "The greatest films voted by MUBI’s",
       "description": "有史以来最伟大的电影，由MUBI全球电影爱好者社区投票选出",
