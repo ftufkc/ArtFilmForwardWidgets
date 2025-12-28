@@ -22,6 +22,15 @@
       "url": "https://raw.githubusercontent.com/ftufkc/ArtFilmForwardWidgets/refs/heads/main/widgets/fa.js"
     },
     {
+      "id": "mm",
+      "title": "MOViE MOViE",
+      "description": "MOViE MOViE電視頻道片單追蹤",
+      "requiredVersion": "0.0.1",
+      "version": "1.2.4",
+      "author": "ddueh",
+      "url": "https://raw.githubusercontent.com/ftufkc/ArtFilmForwardWidgets/refs/heads/main/widgets/mm.js"
+    },
+    {
       "id": "mubi",
       "title": "The greatest films voted by MUBI’s",
       "description": "有史以来最伟大的电影，由MUBI全球电影爱好者社区投票选出",
